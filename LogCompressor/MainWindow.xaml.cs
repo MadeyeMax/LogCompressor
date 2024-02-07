@@ -74,7 +74,7 @@ namespace LogCompressor
                         if (errorKeywordsList.Any(keyword => line.Contains(keyword)))
                         {
                             // adds found line with keyword to new line
-                            errorsInFile.Add($"Fehler: {line}");
+                            errorsInFile.Add($"Found: {line}");
                         }
                     }
 
@@ -95,7 +95,7 @@ namespace LogCompressor
 
         private void kwor_Btn_Click(object sender, RoutedEventArgs e)
         {
-            // adds Keywords dfrom textbox to listbox 
+            // adds Keywords from textbox to listbox 
             string newKword = kword.Text.Trim();
             if (!string.IsNullOrEmpty(newKword))
             {
@@ -111,9 +111,9 @@ namespace LogCompressor
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void removeBtn_Click(object sender, RoutedEventArgs e)
         {
-            // delte selected keyword
+            // delete selected keyword
             if (keywordList.SelectedIndex != -1)
             {
                 int selectedIndex = keywordList.SelectedIndex;
@@ -122,7 +122,7 @@ namespace LogCompressor
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void closeBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
